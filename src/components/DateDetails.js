@@ -18,7 +18,8 @@ class DateDetails extends Component {
   render = () => {
     const { date, displayTime, dayLabels, monthLabels } = this.props
     const hours = t.getHours(date)
-    const minutes = t.getMinutes(date)
+    // const minutes = t.getMinutes(date)
+    const minutes = "00"
 
     return (
       <div className="rlc-date-details-wrapper">
