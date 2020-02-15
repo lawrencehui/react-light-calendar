@@ -37,8 +37,12 @@ class DateDetails extends Component {
               {
                 // times(60).map(minute => {
                 [0,15,45].map(minute => {
-                  <option value={formartTime(minute)} key={minute}>{formartTime(minute)}</option>)
-                }
+                  <option
+                    value={formartTime(minute)}
+                    key={minute}
+                  >
+                    {formartTime(minute)}
+                  </option>})
               }
             </select>
           </div>
