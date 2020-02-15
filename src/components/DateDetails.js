@@ -36,13 +36,13 @@ class DateDetails extends Component {
             <select onChange={this.onMinutesChange} value={minutes}>
               {
                 // times(60).map(minute => {
-                [0,15,45].map(minute => {
+                [0,15,45].map(minute => (
                   <option
                     value={formartTime(minute)}
                     key={minute}
                   >
                     {formartTime(minute)}
-                  </option>})
+                  </option>))
               }
             </select>
           </div>
