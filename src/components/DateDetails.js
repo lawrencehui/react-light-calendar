@@ -34,7 +34,13 @@ class DateDetails extends Component {
           <div className="rlc-date-time-selects">
             <select onChange={this.onHoursChange} value={hours}>{times(24).map(hour => <option value={formartTime(hour)} key={hour}>{formartTime(hour)}</option>)}</select>
             <span className="rlc-time-separator">:</span>
-            <select onChange={this.onMinutesChange} value={minutes}>{[0,15,45].map(minute => <option value={formartTime(minute)} key={minute}>{formartTime(minute)}</option>)}</select>
+            // <select onChange={this.onMinutesChange} value={minutes}>{[0,15,45].map(minute => <option value={formartTime(minute)} key={minute}>{formartTime(minute)}</option>)}</select>
+            <select onChange={this.onMinutesChange} value={minutes}>
+              <option value={formartTime(0)} key={0}>{formartTime(0)}</option>
+              <option value={formartTime(15)} key={15}>{formartTime(15)}</option>
+              <option value={formartTime(30)} key={30}>{formartTime(30)}</option>
+              <option value={formartTime(45)} key={45}>{formartTime(45)}</option>
+            </select>
           </div>
         }
       </div>
